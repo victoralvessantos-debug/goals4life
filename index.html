@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Goals4Life</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <button id="backBtn" class="hidden">←</button>
+
+  <div>
+    <h1 id="headerTitle">Anos</h1>
+    <small id="headerSubtitle"></small>
+  </div>
+
+  <div class="header-actions">
+    <select id="filterSelect" class="hidden">
+      <option value="Todas">Todas</option>
+      <option>Emocional</option>
+      <option>Filhos</option>
+      <option>Intelectual</option>
+      <option>Espiritual</option>
+      <option>Social</option>
+      <option>Profissional</option>
+      <option>Parentes</option>
+      <option>Financeiro</option>
+      <option>Conjugal</option>
+      <option>Saúde</option>
+      <option>Viagens</option>
+      <option>Investimentos</option>
+      <option>Servir</option>
+    </select>
+
+    <button id="themeBtn">🌙</button>
+    <button id="addBtn">＋</button>
+  </div>
+</header>
+
+<main id="main"></main>
+
+<footer class="watermark">Goals4Life</footer>
+
+<!-- MODAIS (iguais aos anteriores) -->
+<!-- ANO -->
+<div class="modal hidden" id="yearModal">
+  <div class="modal-box">
+    <h2>Determine o ano da meta</h2>
+    <select id="yearSelect"></select>
+    <div class="actions">
+      <button onclick="closeModal('yearModal')">Cancelar</button>
+      <button class="primary" id="saveYear">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<!-- META -->
+<div class="modal hidden" id="goalModal">
+  <div class="modal-box">
+    <h2>Criar Meta</h2>
+    <input id="goalTitle" placeholder="Título da meta">
+
+    <label>Data de conclusão</label>
+    <input type="date" id="goalDate">
+
+    <label>Área da vida</label>
+    <select id="goalCategory">
+      <option>Emocional</option>
+      <option>Filhos</option>
+      <option>Intelectual</option>
+      <option>Espiritual</option>
+      <option>Social</option>
+      <option>Profissional</option>
+      <option>Parentes</option>
+      <option>Financeiro</option>
+      <option>Conjugal</option>
+      <option>Saúde</option>
+      <option>Viagens</option>
+      <option>Investimentos</option>
+      <option>Servir</option>
+    </select>
+
+    <label>Imagem (opcional)</label>
+    <input type="file" id="goalImage" accept="image/*">
+
+    <div class="actions">
+      <button onclick="closeModal('goalModal')">Cancelar</button>
+      <button class="primary" id="saveGoal">Salvar Meta</button>
+    </div>
+  </div>
+</div>
+
+<!-- PASSO -->
+<div class="modal hidden" id="stepModal">
+  <div class="modal-box">
+    <h2>Novo Passo</h2>
+    <input id="stepText" placeholder="Descreva o passo">
+    <div class="actions">
+      <button onclick="closeModal('stepModal')">Cancelar</button>
+      <button class="primary" id="saveStep">Adicionar</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
